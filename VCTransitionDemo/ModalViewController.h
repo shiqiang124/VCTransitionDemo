@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CENavigationController.h"
+#import "CEViewController.h"
 
 @class ModalViewController;
 @protocol ModalViewControllerDelegate <NSObject>
@@ -15,6 +17,6 @@
 
 @end
 
-@interface ModalViewController : UIViewController
+@interface ModalViewController : CEViewController
 @property (nonatomic, weak) id<ModalViewControllerDelegate> delegate;
 @end

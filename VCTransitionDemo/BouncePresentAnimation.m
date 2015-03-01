@@ -11,7 +11,7 @@
 @implementation BouncePresentAnimation
 - (NSTimeInterval)transitionDuration:(id <UIViewControllerContextTransitioning>)transitionContext
 {
-    return 0.8f;
+    return 0.4f;
 }
 
 - (void)animateTransition:(id <UIViewControllerContextTransitioning>)transitionContext
@@ -30,6 +30,15 @@
     
     // 4. Do animate now
     NSTimeInterval duration = [self transitionDuration:transitionContext];
+    
+    
+    [UIView animateWithDuration:duration animations:^{
+        toVC.view.frame = finalFrame;
+    } completion:^(BOOL finished) {
+        // 5. Tell context that we completed.
+        [transitionContext completeTransition:YES];
+    }];
+    /*
     [UIView animateWithDuration:duration
                           delay:0.0
          usingSpringWithDamping:0.6
@@ -40,6 +49,6 @@
                      } completion:^(BOOL finished) {
                          // 5. Tell context that we completed.
                          [transitionContext completeTransition:YES];
-                     }];
+                     }];*/
 }
 @end

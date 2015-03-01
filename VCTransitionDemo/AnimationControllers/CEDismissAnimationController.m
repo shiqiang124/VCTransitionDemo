@@ -1,27 +1,20 @@
 //
-//  NormalDismissAnimation.m
+//  CEDismissAnimationController.m
 //  VCTransitionDemo
 //
-//  Created by 王 巍 on 13-10-13.
-//  Copyright (c) 2013年 王 巍. All rights reserved.
+//  Created by sq on 15/3/1.
+//  Copyright (c) 2015年 王 巍. All rights reserved.
 //
 
-#import "NormalDismissAnimation.h"
+#import "CEDismissAnimationController.h"
 
-@implementation NormalDismissAnimation
-- (NSTimeInterval)transitionDuration:(id <UIViewControllerContextTransitioning>)transitionContext
-{
-    return 0.4f;
-}
+@implementation CEDismissAnimationController
 
-- (void)animateTransition:(id <UIViewControllerContextTransitioning>)transitionContext
-{
+
+- (void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext fromVC:(UIViewController *)fromVC toVC:(UIViewController *)toVC fromView:(UIView *)fromView toView:(UIView *)toView {
     
-    // 1. Get controllers from transition context
-    UIViewController *fromVC = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
-    UIViewController *toVC = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
+    self.duration = .3;
     
-    //NSLog(@"classname:toVc:%@",NSStringFromClass([toVC class]));
     
     // 2. Set init frame for fromVC
     CGRect screenBounds = [[UIScreen mainScreen] bounds];
@@ -34,7 +27,7 @@
     UIView *containerView = [transitionContext containerView];
     [containerView addSubview:toVC.view];
     [containerView sendSubviewToBack:toVC.view];
-
+    
     // 4. Do animate now
     NSTimeInterval duration = [self transitionDuration:transitionContext];
     [UIView animateWithDuration:duration animations:^{
@@ -44,6 +37,8 @@
         //NSLog(@"animate...end");
         [transitionContext completeTransition:![transitionContext transitionWasCancelled]];
     }];
+    
 }
+
 
 @end

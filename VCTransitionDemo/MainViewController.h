@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CEViewController.h"
 
 @interface MainViewController : UIViewController
 

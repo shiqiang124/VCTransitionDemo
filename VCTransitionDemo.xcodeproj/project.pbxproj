@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1678CCF91AA3434100DFD8E2 /* CEPanNavigationAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1678CCE21AA3434100DFD8E2 /* CEPanNavigationAnimationController.m */; };
+		1678CCFB1AA3434100DFD8E2 /* CEReversibleAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1678CCE61AA3434100DFD8E2 /* CEReversibleAnimationController.m */; };
+		1678CCFD1AA3434100DFD8E2 /* CEBaseInteractionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1678CCEB1AA3434100DFD8E2 /* CEBaseInteractionController.m */; };
+		1678CCFE1AA3434100DFD8E2 /* CEPanNavigationSwipeInteractionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1678CCED1AA3434100DFD8E2 /* CEPanNavigationSwipeInteractionController.m */; };
+		1678CD031AA34DC800DFD8E2 /* CENavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1678CD021AA34DC800DFD8E2 /* CENavigationController.m */; };
+		1678CD061AA3520100DFD8E2 /* CEDismissAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1678CD051AA3520100DFD8E2 /* CEDismissAnimationController.m */; };
+		1678CD091AA3587900DFD8E2 /* CEPanDismissInteractionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1678CD081AA3587900DFD8E2 /* CEPanDismissInteractionController.m */; };
+		1678CD0C1AA35FA000DFD8E2 /* CEViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1678CD0B1AA35FA000DFD8E2 /* CEViewController.m */; };
 		D1648CF1180992930058DFE8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1648CF0180992930058DFE8 /* Foundation.framework */; };
 		D1648CF3180992930058DFE8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1648CF2180992930058DFE8 /* CoreGraphics.framework */; };
 		D1648CF5180992930058DFE8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1648CF4180992930058DFE8 /* UIKit.framework */; };
@@ -37,6 +45,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1678CCE11AA3434100DFD8E2 /* CEPanNavigationAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CEPanNavigationAnimationController.h; sourceTree = "<group>"; };
+		1678CCE21AA3434100DFD8E2 /* CEPanNavigationAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CEPanNavigationAnimationController.m; sourceTree = "<group>"; };
+		1678CCE51AA3434100DFD8E2 /* CEReversibleAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CEReversibleAnimationController.h; sourceTree = "<group>"; };
+		1678CCE61AA3434100DFD8E2 /* CEReversibleAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CEReversibleAnimationController.m; sourceTree = "<group>"; };
+		1678CCEA1AA3434100DFD8E2 /* CEBaseInteractionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CEBaseInteractionController.h; sourceTree = "<group>"; };
+		1678CCEB1AA3434100DFD8E2 /* CEBaseInteractionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CEBaseInteractionController.m; sourceTree = "<group>"; };
+		1678CCEC1AA3434100DFD8E2 /* CEPanNavigationSwipeInteractionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CEPanNavigationSwipeInteractionController.h; sourceTree = "<group>"; };
+		1678CCED1AA3434100DFD8E2 /* CEPanNavigationSwipeInteractionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CEPanNavigationSwipeInteractionController.m; sourceTree = "<group>"; };
+		1678CD011AA34DC800DFD8E2 /* CENavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CENavigationController.h; sourceTree = "<group>"; };
+		1678CD021AA34DC800DFD8E2 /* CENavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CENavigationController.m; sourceTree = "<group>"; };
+		1678CD041AA3520100DFD8E2 /* CEDismissAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CEDismissAnimationController.h; sourceTree = "<group>"; };
+		1678CD051AA3520100DFD8E2 /* CEDismissAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CEDismissAnimationController.m; sourceTree = "<group>"; };
+		1678CD071AA3587900DFD8E2 /* CEPanDismissInteractionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CEPanDismissInteractionController.h; sourceTree = "<group>"; };
+		1678CD081AA3587900DFD8E2 /* CEPanDismissInteractionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CEPanDismissInteractionController.m; sourceTree = "<group>"; };
+		1678CD0A1AA35FA000DFD8E2 /* CEViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CEViewController.h; sourceTree = "<group>"; };
+		1678CD0B1AA35FA000DFD8E2 /* CEViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CEViewController.m; sourceTree = "<group>"; };
 		D1648CED180992930058DFE8 /* VCTransitionDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VCTransitionDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1648CF0180992930058DFE8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D1648CF2180992930058DFE8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -89,6 +113,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1678CCD21AA3434100DFD8E2 /* AnimationControllers */ = {
+			isa = PBXGroup;
+			children = (
+				1678CCE51AA3434100DFD8E2 /* CEReversibleAnimationController.h */,
+				1678CCE61AA3434100DFD8E2 /* CEReversibleAnimationController.m */,
+				1678CCE11AA3434100DFD8E2 /* CEPanNavigationAnimationController.h */,
+				1678CCE21AA3434100DFD8E2 /* CEPanNavigationAnimationController.m */,
+				1678CD041AA3520100DFD8E2 /* CEDismissAnimationController.h */,
+				1678CD051AA3520100DFD8E2 /* CEDismissAnimationController.m */,
+			);
+			path = AnimationControllers;
+			sourceTree = "<group>";
+		};
+		1678CCE91AA3434100DFD8E2 /* InteractionControllers */ = {
+			isa = PBXGroup;
+			children = (
+				1678CCEA1AA3434100DFD8E2 /* CEBaseInteractionController.h */,
+				1678CCEB1AA3434100DFD8E2 /* CEBaseInteractionController.m */,
+				1678CCEC1AA3434100DFD8E2 /* CEPanNavigationSwipeInteractionController.h */,
+				1678CCED1AA3434100DFD8E2 /* CEPanNavigationSwipeInteractionController.m */,
+				1678CD071AA3587900DFD8E2 /* CEPanDismissInteractionController.h */,
+				1678CD081AA3587900DFD8E2 /* CEPanDismissInteractionController.m */,
+			);
+			path = InteractionControllers;
+			sourceTree = "<group>";
+		};
 		D1648CE4180992930058DFE8 = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +172,8 @@
 		D1648CF6180992930058DFE8 /* VCTransitionDemo */ = {
 			isa = PBXGroup;
 			children = (
+				1678CCD21AA3434100DFD8E2 /* AnimationControllers */,
+				1678CCE91AA3434100DFD8E2 /* InteractionControllers */,
 				D1648CFF180992930058DFE8 /* AppDelegate.h */,
 				D1648D00180992930058DFE8 /* AppDelegate.m */,
 				D1648D02180992930058DFE8 /* Images.xcassets */,
@@ -136,6 +188,10 @@
 				D1648D2F180ADA550058DFE8 /* NormalDismissAnimation.m */,
 				D1648D28180AB3F20058DFE8 /* SwipeUpInteractiveTransition.h */,
 				D1648D29180AB3F20058DFE8 /* SwipeUpInteractiveTransition.m */,
+				1678CD011AA34DC800DFD8E2 /* CENavigationController.h */,
+				1678CD021AA34DC800DFD8E2 /* CENavigationController.m */,
+				1678CD0A1AA35FA000DFD8E2 /* CEViewController.h */,
+				1678CD0B1AA35FA000DFD8E2 /* CEViewController.m */,
 			);
 			path = VCTransitionDemo;
 			sourceTree = "<group>";
@@ -264,13 +320,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1678CCF91AA3434100DFD8E2 /* CEPanNavigationAnimationController.m in Sources */,
 				D1648D27180A34F60058DFE8 /* BouncePresentAnimation.m in Sources */,
 				D1648D2418099C070058DFE8 /* ModalViewController.m in Sources */,
+				1678CD091AA3587900DFD8E2 /* CEPanDismissInteractionController.m in Sources */,
+				1678CD0C1AA35FA000DFD8E2 /* CEViewController.m in Sources */,
+				1678CD031AA34DC800DFD8E2 /* CENavigationController.m in Sources */,
+				1678CCFE1AA3434100DFD8E2 /* CEPanNavigationSwipeInteractionController.m in Sources */,
 				D1648D30180ADA550058DFE8 /* NormalDismissAnimation.m in Sources */,
+				1678CCFD1AA3434100DFD8E2 /* CEBaseInteractionController.m in Sources */,
 				D1648D01180992930058DFE8 /* AppDelegate.m in Sources */,
 				D1648D21180992EE0058DFE8 /* MainViewController.m in Sources */,
 				D1648CFD180992930058DFE8 /* main.m in Sources */,
+				1678CD061AA3520100DFD8E2 /* CEDismissAnimationController.m in Sources */,
 				D1648D2A180AB3F20058DFE8 /* SwipeUpInteractiveTransition.m in Sources */,
+				1678CCFB1AA3434100DFD8E2 /* CEReversibleAnimationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,6 +537,7 @@
 				D1648D1B180992930058DFE8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D1648D1C180992930058DFE8 /* Build configuration list for PBXNativeTarget "VCTransitionDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -481,6 +546,7 @@
 				D1648D1E180992930058DFE8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

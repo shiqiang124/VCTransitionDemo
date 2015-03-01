@@ -8,8 +8,21 @@
 
 #import <UIKit/UIKit.h>
 
+
+#define AppDelegateAccessor ((AppDelegate *)[[UIApplication sharedApplication] delegate])
+
+@class CEReversibleAnimationController, CEBaseInteractionController;
+
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
+
+@property (strong, nonatomic) CEReversibleAnimationController *navigationControllerAnimationController;
+@property (strong, nonatomic) CEBaseInteractionController *navigationControllerInteractionController;
+
+
+
+@property (strong, nonatomic) CEReversibleAnimationController *dismissControllerAnimationController;
+@property (strong, nonatomic) CEBaseInteractionController *dismissControllerInteractionController;
 @end

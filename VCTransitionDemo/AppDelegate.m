@@ -9,17 +9,38 @@
 #import "AppDelegate.h"
 #import "MainViewController.h"
 
+#import "CEPanNavigationAnimationController.h"
+#import "CEPanNavigationSwipeInteractionController.h"
+
+#import "CEDismissAnimationController.h"
+#import "CEPanDismissInteractionController.h"
+
+#import "CENavigationController.h"
+
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
     
+    
+    AppDelegateAccessor.navigationControllerAnimationController = [CEPanNavigationAnimationController new];
+    AppDelegateAccessor.navigationControllerInteractionController = [CEPanNavigationSwipeInteractionController new];
+    
+    AppDelegateAccessor.dismissControllerAnimationController = [CEDismissAnimationController new];
+    AppDelegateAccessor.dismissControllerInteractionController = [CEPanDismissInteractionController new];
+    
+    // Override point for customization after application launch.
     MainViewController *mvc = [[MainViewController alloc] init];
-    self.window.rootViewController = mvc;
+    CENavigationController *nav1 = [[CENavigationController alloc] initWithRootViewController:mvc];
+    nav1.delegate = nav1;
+    
+    self.window.rootViewController = nav1;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    
+
     return YES;
 }
 

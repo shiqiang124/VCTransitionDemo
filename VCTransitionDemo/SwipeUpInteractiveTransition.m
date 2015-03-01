@@ -34,11 +34,13 @@
     CGPoint translation = [gestureRecognizer translationInView:gestureRecognizer.view.superview];
     switch (gestureRecognizer.state) {
         case UIGestureRecognizerStateBegan:
+            NSLog(@"UIGestureRecognizerStateBegan");
             // 1. Mark the interacting flag. Used when supplying it in delegate.
             self.interacting = YES;
             [self.presentingVC dismissViewControllerAnimated:YES completion:nil];
             break;
         case UIGestureRecognizerStateChanged: {
+            //NSLog(@"UIGestureRecognizerStateChanged");
             // 2. Calculate the percentage of guesture
             CGFloat fraction = translation.y / 400.0;
             //Limit it between 0 and 1

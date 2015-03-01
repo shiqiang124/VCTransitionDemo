@@ -11,11 +11,10 @@
 #import "BouncePresentAnimation.h"
 #import "NormalDismissAnimation.h"
 #import "SwipeUpInteractiveTransition.h"
+#import "CENavigationController.h"
+#import "AppDelegate.h"
 
-@interface MainViewController ()<ModalViewControllerDelegate,UIViewControllerTransitioningDelegate>
-@property (nonatomic, strong) BouncePresentAnimation *presentAnimation;
-@property (nonatomic, strong) NormalDismissAnimation *dismissAnimation;
-@property (nonatomic, strong) SwipeUpInteractiveTransition *transitionController;
+@interface MainViewController ()<ModalViewControllerDelegate>
 @end
 
 @implementation MainViewController
@@ -24,10 +23,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
-        _presentAnimation = [BouncePresentAnimation new];
-        _dismissAnimation = [NormalDismissAnimation new];
-        _transitionController = [SwipeUpInteractiveTransition new];
+        
     }
     return self;
 }
@@ -41,16 +37,31 @@
     [button setTitle:@"Click me" forState:UIControlStateNormal];
     [button addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button];
+    
+ 
+    
 }
 
 -(void) buttonClicked:(id)sender
 {
+    
     ModalViewController *mvc =  [[ModalViewController alloc] init];
-    mvc.transitioningDelegate = self;
+    
+    //mvc.transitioningDelegate = mvc;
     mvc.delegate = self;
-    [self.transitionController wireToViewController:mvc];
-    [self presentViewController:mvc animated:YES completion:nil];
+    
+    CENavigationController *nav1 = [[CENavigationController alloc] initWithRootViewController:mvc];
+    nav1.delegate = nav1;
+    nav1.transitioningDelegate = mvc;
+    
+    //[self.transitionController wireToViewController:mvc];
+    [self presentViewController:nav1 animated:YES completion:nil];
+     
+    
+    
+    //[self.navigationController pushViewController:mvc animated:YES];
 }
+
 
 -(void)modalViewControllerDidClickedDismissButton:(ModalViewController *)viewController
 {
@@ -63,18 +74,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (id <UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source
-{
-    return self.presentAnimation;
-}
 
--(id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed
-{
-    return self.dismissAnimation;
-}
-
--(id<UIViewControllerInteractiveTransitioning>)interactionControllerForDismissal:(id<UIViewControllerAnimatedTransitioning>)animator {
-    return self.transitionController.interacting ? self.transitionController : nil;
-}
 
 @end
